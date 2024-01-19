@@ -1,0 +1,3 @@
+[submodule "lib/smtcoq"]
+	path = lib/smtcoq
+	url = https://github.com/smtcoq/smtcoq

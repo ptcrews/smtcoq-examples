@@ -1,0 +1,5 @@
+-R ./lib/smtcoq/src/ SMTCoq
+-I ./lib/smtcoq/src/
+
+-R ./src/ Test
+src/Test.v
