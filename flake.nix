@@ -12,6 +12,13 @@
         let
           pkgs = import nixpkgs { inherit system; };
           ocamlPackages = pkgs.ocaml-ng.ocamlPackages_4_10;
+          oldVerit = import (builtins.fetchGit {
+            # Descriptive name to make the store path easier to identify
+            name = "veriT-smtcoq";
+            url = "https://github.com/NixOS/nixpkgs/";
+            ref = "refs/heads/nixos-22.11";
+            rev = "3479555209833f42c16f9da373b6f64af1b06c4a";
+          }) { inherit system; };
         in
         {
           devShells.default = pkgs.mkShell {
@@ -20,7 +27,7 @@
               #coqPackages_8_13.smtcoq
               coq_8_13
               cvc4
-              veriT
+              oldVerit.veriT
               zchaff
             ];
             nativeBuildInputs = with ocamlPackages; [

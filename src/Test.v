@@ -17,7 +17,7 @@ Section group.
 
   Lemma inverse' :
     forall a : Z, (op a (inv a) =? e).
-  Proof. smt. Qed.
+  Proof. verit. Qed.
 
   Lemma identity' :
     forall a : Z, (op a e =? a).
