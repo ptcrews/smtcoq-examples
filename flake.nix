@@ -27,14 +27,18 @@
               #coqPackages_8_13.smtcoq
               coq_8_13
               cvc4
+              cvc5
               oldVerit.veriT
               zchaff
             ];
             nativeBuildInputs = with ocamlPackages; [
               ocaml
               findlib
-              dune_2
+              dune_1
               num
+              menhir
+              zarith
+              ocaml-lsp
             ];
           };
         }
